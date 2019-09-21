@@ -22,24 +22,37 @@ $(document).ready(function() {
   }
   var programmingLanguagesArray = [javaScript, cSharp, python];
   $("#user-input-container form").submit(function(event) {
-    var yearDevelopedInput = $("input:radio[name='year-developed']:checked").val();
     var languageUseInput = $("input:radio[name='language-use']:checked").val();
     var paradigmAmountInput = $("input:radio[name='paradigm-amount']:checked").val();
     var bestLetterInput = $("input:radio[name='best-letter']:checked").val();
     var bestAnimalInput = $("input:radio[name='animal-type']:checked").val();
-    checkYearDevelopedInput(yearDevelopedInput);
-    checkLanguageUseInput(languageUseInput);
-    checkParadigmAmountInput(paradigmAmountInput);
-    checkBestLetterInput(bestLetterInput);
-    checkBestAnimalInput(bestAnimalInput);
+    var yearDevelopedInput = $("input:radio[name='year-developed']:checked").val();
 
     event.preventDefault();
   });
+  function calculateProgrammingLanguageScore(languageUseArg, paradigmAmountArg, bestLetterArg, bestAnimalArg, yearDevelopedArg, language) {
+    var score = 0;
+    var languagePropertyArray = [];
+    var languageArgArray = [languageUseArg, paradigmAmountArg, bestLetterArg, bestAnimalArg, yearDevelopedArg];
+    for (key in language) {
+      if(language.hasOwnProperty(key)) {
+        languagePropertyArray.push(language[key]);
+      }
+    }
+    for (var i = 0; i < languagePropertyArray.length; i++) {
+      if (languagePropertyArray[i] === languageArgArray[i]) {
+        score = score + 1;
+      } else {
+        score = score + 0;
+      }
+    }
+    return score;
+  }
   function checkYearDevelopedInput(inputArg) {
     if(inputArg === undefined) {
       $("#yearDevelopedInputContainer p").remove();
       $("#yearDevelopedInputContainer").append("<p>Please select an option</p>");
-      return false;
+
     } else {
       return true;
     }
@@ -48,7 +61,7 @@ $(document).ready(function() {
     if(inputArg === undefined) {
       $("#languageUseInputContainer p").remove();
       $("#languageUseInputContainer").append("<p>Please select an option</p>");
-      return false;
+
     } else {
       return true;
     }
@@ -57,7 +70,7 @@ $(document).ready(function() {
     if(inputArg === undefined) {
       $("#paradigmAmountInputContainer p").remove();
       $("#paradigmAmountInputContainer").append("<p>Please select an option</p>");
-      return false;
+
     } else {
       return true;
     }
@@ -66,7 +79,7 @@ $(document).ready(function() {
     if(inputArg === undefined) {
       $("#bestLetterInputContainer p").remove();
       $("#bestLetterInputContainer").append("<p>Please select an option</p>");
-      return false;
+
     } else {
       return true;
     }
@@ -75,7 +88,7 @@ $(document).ready(function() {
     if(inputArg === undefined) {
       $("#bestAnimalInputContainer p").remove();
       $("#bestAnimalInputContainer").append("<p>Please select an option</p>");
-      return false;
+
     } else {
       return true;
     }
