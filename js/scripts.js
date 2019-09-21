@@ -85,11 +85,11 @@ $(document).ready(function() {
     }
     for (var i = 0; i < languagePropertyArray.length; i++) {
       if (languagePropertyArray[i] === languageArgArray[i]) {
-          score = score + 1;
+        score = score + 1;
       } else {
-          score = score + 0;
-        }
+        score = score + 0;
       }
+    }
     return score;
   }
   function checkYearDevelopedInput(inputArg) {
@@ -98,7 +98,7 @@ $(document).ready(function() {
       $("#yearDevelopedInputContainer").append("<p class='error'>Please select an option</p>");
       return false;
     } else {
-        return true;
+      return true;
     }
   }
   function checkLanguageUseInput(inputArg) {
@@ -107,25 +107,25 @@ $(document).ready(function() {
       $("#languageUseInputContainer").append("<p class='error'>Please select an option</p>");
       return false;
     } else {
-        return true;
-      }
+      return true;
     }
+  }
   function checkParadigmAmountInput(inputArg) {
     if(inputArg === undefined) {
       $("#paradigmAmountInputContainer p").remove();
       $("#paradigmAmountInputContainer").append("<p class='error'>Please select an option</p>");
       return false;
     } else {
-        return true;
-      }
+      return true;
     }
+  }
   function checkBestLetterInput(inputArg) {
     if(inputArg === undefined) {
       $("#bestLetterInputContainer p").remove();
       $("#bestLetterInputContainer").append("<p class='error'>Please select an option</p>");
       return false;
     } else {
-        return true;
+      return true;
     }
   }
   function checkBestAnimalInput(inputArg) {
@@ -134,7 +134,7 @@ $(document).ready(function() {
       $("#bestAnimalInputContainer").append("<p class='error'>Please select an option</p>");
       return false;
     } else {
-        return true;
+      return true;
     }
   }
 });
