@@ -17,82 +17,92 @@
           <div id="user-input-container">
             <h2>Not sure which programming language to learn? Fill out the survey and submit your answers for some guidance.</h2>
             <form>
-              <h2>Would you prefer to learn a language developed before or after the year 2000?</h2>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="year-developed" value="0">
-                  Before 2000
-                </label>
+              <div id=yearDevelopedInputContainer>
+                <h2>Would you prefer to learn a language developed before or after the year 2000?</h2>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="year-developed" value="0">
+                    Before 2000
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="year-developed" value="1">
+                    After 2000
+                  </label>
+                </div>
               </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="year-developed" value="1">
-                  After 2000
-                </label>
+              <div id="languageUseInputContainer">
+                <h2>What would you like to use the language for most?</h2>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="language-use" value="application">
+                    Application development
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="language-use" value="web">
+                    Web development
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="language-use" value="data">
+                    Data processing
+                  </label>
+                </div>
               </div>
-              <h2>What would you like to use the language for most?</h2>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="language-use" value="application">
-                  Application development
-                </label>
+              <div id="paradigmAmountInputContainer">
+                <h2>Would you prefer the language have more or less paradigms to follow when coding?</h2>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="paradigm-amount" value="more">
+                    More paradigms
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="language-use" value="less">
+                    Less paradigms
+                  </label>
+                </div>
               </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="language-use" value="web">
-                  Web development
-                </label>
+              <div id="bestLetterInputContainer">
+                <h2>Which letter do you like more?</h2>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="best-letter" value="c">
+                    C
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="best-letter" value="j">
+                    J
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="animal-type" value="p">
+                    P
+                  </label>
+                </div>
               </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="language-use" value="data">
-                  Data processing
-                </label>
-              </div>
-              <h2>Would you prefer the language have more or less paradigms to follow when coding?</h2>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="paradigm-amount" value="more">
-                  More paradigms
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="language-use" value="less">
-                  Less paradigms
-                </label>
-              </div>
-              <h2>Which letter do you like more?</h2>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="best-letter" value="c">
-                  C
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="best-letter" value="j">
-                  J
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="animal-type" value="p">
-                  P
-                </label>
-              </div>
-              <h2>Which animal type do you like more?</h2>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="animal-type" value="cat">
-                  Cat
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="animal-type" value="dog">
-                  Dog
-                </label>
+              <div id="bestAnimalInputContainer">
+                <h2>Which animal type do you like more?</h2>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="animal-type" value="cat">
+                    Cat
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="animal-type" value="dog">
+                    Dog
+                  </label>
+                </div>
               </div>
               <button type="submit" class="btn" name="button">Submit answers</button>
             </form>
